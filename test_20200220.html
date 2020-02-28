@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2020年测试</title>
+</head>
+<body>
+测试Jquery，学习Jquery
+
+<form id="frm" action="http://www.qq.com" method="post">
+<p>
+    姓名：<input type="text" id="username">
+</p>
+    <p>
+        密码：<input type="text" id="password">
+    </p>
+    <p>
+        <input type="submit" value="确定">
+    </p>
+</form>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+    $('#frm').submit(function () {
+        var name=$('#username').val();
+        if(name==""){
+            alert("请输入用户名！");
+            return false;//阻止表单提交
+        }
+        return true;
+    })
+</script>
+
+<p>
+    <H4>你的爱好有：</H4>
+</p>
+<p>
+    <input type="checkbox" value="sing" class="hobby">唱歌
+    <input type="checkbox" value="dan" class="hobby">跳舞
+    <input type="checkbox" value="poi" class="hobby">画画
+    <br>
+    <input type="checkbox" value="all" id="checkAll">全选
+</p>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+    var flag=false;
+    $('#checkAll').click(function () {//取id值用#
+
+       //alert("你点到我了……");
+        if(flag==false){
+    $('.hobby').prop("checked",true);
+    //将同类型的checkbox命名为同一个类hobby,一次性给其checked赋true
+        flag=true;
+    }else
+    {
+    $('.hobby').prop("checked",false);//取class值用.
+        flag=false;
+    }
+    });
+
+</script>
+
+
+
+</body>
+</html>

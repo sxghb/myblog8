@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>用户登录</title>
+    <style>
+
+
+
+        .center{
+            text-align: center;
+            padding: 60px;
+            background-color: pink;
+        }
+        .in{
+
+            outline-style: none ;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+            padding: 13px 14px;
+            width: 300px;
+            font-size: 14px;
+            font-weight: 700;
+            font-family: "Microsoft soft";
+            background-color: pink;
+        }
+        .but1{
+            color: white;
+            background-color: aqua;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        .but2{
+            color: white;
+            background-color: red;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        form input:hover{
+
+            background-color:white;
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div class="center">
+    <h1>欢迎登录知识竞赛答题系统</h1>
+    <form action="/HelloServlet"  method="post">
+        用户名 ：<input class="in" value="gzy"  type="text" placeholder="请输入用户名" required  name=username size=20><br>
+        <br>
+        <br>
+        密  码：<input class="in" type="password" value="123" placeholder="请输入密码" required name=password size=20><br>
+        <br><br>
+
+
+
+        <button class="but1" type="submit" name="b1">提交</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="but2" type="reset" name="b2">重置</button>
+
+    </form> </div>
+
+</body>
+</html>
